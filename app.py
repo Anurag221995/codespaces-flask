@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Flask
 import os
 import subprocess
@@ -33,3 +34,12 @@ def htop():
 
 if __name__ == '_main_':
     app.run(host='0.0.0.0', port=5000)
+=======
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return render_template("index.html", title="Hello")
+>>>>>>> 579b02286e1060b47450e18dd4b4e28ea45fbe98
